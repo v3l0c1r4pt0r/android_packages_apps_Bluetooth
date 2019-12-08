@@ -259,15 +259,6 @@ public class BluetoothOppObexServerSession extends ServerRequestHandler
             mimeType = mimeType.toLowerCase();
         }
 
-        // Reject anything outside the "whitelist" plus unspecified MIME Types.
-        if (mimeType == null || (!isWhitelisted && !Constants.mimeTypeMatches(mimeType,
-                Constants.ACCEPTABLE_SHARE_INBOUND_TYPES))) {
-            if (D) {
-                Log.w(TAG, "mimeType is null or in unacceptable list, reject the transfer");
-            }
-            return ResponseCodes.OBEX_HTTP_UNSUPPORTED_TYPE;
-        }
-
         ContentValues values = new ContentValues();
         values.put(BluetoothShare.FILENAME_HINT, name);
         values.put(BluetoothShare.TOTAL_BYTES, length);

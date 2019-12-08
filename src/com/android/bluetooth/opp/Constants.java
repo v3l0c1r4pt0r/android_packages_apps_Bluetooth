@@ -170,32 +170,6 @@ public class Constants {
 
     static final int MEDIA_SCANNED_SCANNED_FAILED = 2;
 
-    /**
-     * The MIME type(s) of we could accept from other device.
-     * This is in essence a "white list" of acceptable types.
-     * Today, restricted to images, audio, video and certain text types.
-     */
-    static final String[] ACCEPTABLE_SHARE_INBOUND_TYPES = new String[]{
-            "image/*",
-            "video/*",
-            "audio/*",
-            "text/x-vcard",
-            "text/x-vcalendar",
-            "text/calendar",
-            "text/plain",
-            "text/html",
-            "text/xml",
-            "application/zip",
-            "application/vnd.ms-excel",
-            "application/msword",
-            "application/vnd.ms-powerpoint",
-            "application/pdf",
-            "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-            "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-            "application/vnd.openxmlformats-officedocument.presentationml.presentation",
-            "application/x-hwp",
-    };
-
     /** Where we store received files */
     static final String DEFAULT_STORE_SUBDIR = "/bluetooth";
 
